@@ -1,0 +1,5 @@
+plan_id,plan_name,monthly_price_usd,billing_cycle,included_features,support_tier
+P01,Basic,19.0,Monthly,4,Standard
+P02,Plus,39.0,Monthly,8,Priority
+P03,Premium,69.0,Monthly,15,Premium
+P04,Business,129.0,Monthly,25,Dedicated

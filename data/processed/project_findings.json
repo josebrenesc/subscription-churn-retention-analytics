@@ -1,0 +1,13 @@
+{
+  "highest_churn_plan": "Basic",
+  "highest_churn_plan_share": 0.35313977042538824,
+  "top_cancellation_reason": "Too Expensive",
+  "top_cancellation_reason_events": 957,
+  "highest_risk_segment": "Consumer",
+  "highest_risk_acquisition_channel": "Affiliate",
+  "highest_risk_segment_cancelled_share": 3.687878787878788,
+  "highest_monthly_churn_month": "2026-06",
+  "highest_monthly_churn_rate": 0.03194955333683657,
+  "latest_month": "2026-06",
+  "latest_month_churn_rate": 0.03194955333683657
+}

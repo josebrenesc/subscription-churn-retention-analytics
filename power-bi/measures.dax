@@ -1,0 +1,99 @@
+-- Core DAX measures
+
+Total Subscriptions =
+COUNTROWS(Subscriptions)
+
+Active Subscriptions =
+CALCULATE(
+    [Total Subscriptions],
+    Subscriptions[subscription_status] = "Active"
+)
+
+Cancelled Subscriptions =
+CALCULATE(
+    [Total Subscriptions],
+    Subscriptions[subscription_status] = "Cancelled"
+)
+
+Current Cancelled Share =
+DIVIDE(
+    [Cancelled Subscriptions],
+    [Total Subscriptions],
+    0
+)
+
+Cancellation Events =
+COUNTROWS(Cancellations)
+
+Reactivation Events =
+COUNTROWS(Reactivations)
+
+Reactivation Event Rate =
+DIVIDE(
+    [Reactivation Events],
+    [Cancellation Events],
+    0
+)
+
+Current MRR =
+SUMX(
+    FILTER(
+        Subscriptions,
+        Subscriptions[subscription_status] = "Active"
+    ),
+    RELATED(Plans[monthly_price_usd])
+        * (1 - Subscriptions[discount_pct] / 100)
+)
+
+Current ARR =
+[Current MRR] * 12
+
+Billed Revenue =
+SUM(Payments[billed_amount_usd])
+
+Collected Revenue =
+SUM(Payments[paid_amount_usd])
+
+Refund Amount =
+SUM(Payments[refund_amount_usd])
+
+Refund Rate =
+DIVIDE(
+    [Refund Amount],
+    [Billed Revenue],
+    0
+)
+
+Failed or Past Due Payments =
+CALCULATE(
+    COUNTROWS(Payments),
+    Payments[payment_status] IN {"Failed", "Past Due"}
+)
+
+Payment Failure Rate =
+DIVIDE(
+    [Failed or Past Due Payments],
+    COUNTROWS(Payments),
+    0
+)
+
+Average Utilization =
+AVERAGE(Monthly_Usage[plan_limit_utilization])
+
+Average Active Days =
+AVERAGE(Monthly_Usage[active_days])
+
+Average NPS =
+AVERAGE(Monthly_Usage[nps_score])
+
+Average Support CSAT =
+AVERAGE(Support_Contacts[csat_score])
+
+Support FCR =
+AVERAGE(Support_Contacts[resolved_first_contact])
+
+Save Offer Presentation Rate =
+AVERAGE(Cancellations[save_offer_presented])
+
+Save Offer Acceptance Rate =
+AVERAGE(Cancellations[save_offer_accepted])

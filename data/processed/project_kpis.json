@@ -1,0 +1,22 @@
+{
+  "total_subscriptions": 13156,
+  "active_subscriptions": 9211,
+  "cancelled_subscriptions": 3945,
+  "billed_revenue_usd": 6977036.49,
+  "collected_revenue_usd": 6641050.89,
+  "refund_amount_usd": 83695.86,
+  "payment_failure_rate": 0.03619526242976933,
+  "avg_utilization": 0.5936190846720687,
+  "avg_nps": 7.634032581382874,
+  "avg_active_days": 16.58053587057794,
+  "support_fcr": 0.7271522528713066,
+  "support_csat": 4.373932462942967,
+  "refund_request_rate": 0.0388485324433101,
+  "current_mrr_usd": 371044.95,
+  "current_arr_usd": 4452539.4,
+  "current_cancelled_share": 0.2998631802979629,
+  "cancellation_events": 4443,
+  "reactivation_events": 470,
+  "reactivation_event_rate": 0.10578437992347513,
+  "refund_rate": 0.011995904008809333
+}
