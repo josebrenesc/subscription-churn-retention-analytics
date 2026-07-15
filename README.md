@@ -74,9 +74,8 @@ erDiagram
   **35.3%**.
 - **Too Expensive** was the most common cancellation
   reason with **957 events**.
-- The highest-risk segment was **Consumer via
-  Affiliate**, with a cancelled share of
-  **368.8%**.
+- The highest-risk segment was Consumer via Partner,
+with a current cancelled share of 32.4%.
 - The highest monthly churn rate occurred in **2026-06**
   at **3.19%**.
 - Payment recovery, usage, product value, support, and cancellation intent require
